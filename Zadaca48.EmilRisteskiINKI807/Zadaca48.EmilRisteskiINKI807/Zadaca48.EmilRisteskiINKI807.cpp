@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <fstream>
 using namespace std;
 
 int main()
@@ -57,8 +58,13 @@ int main()
     cout << "\nSortiran vektor i dodaden datumot na ragjanje : " << endl;
     for (int i = 0; i < VectorASCII.size(); i++) {
         cout << VectorASCII[i] << " ";
+        
+        ofstream File;                     
+        File.open("INKI807.Proekt3.txt", fstream::app);
+        File << VectorASCII[i] << "\t";            // kreiranje na dadoteka kade sto se smestuva vektorot
     }
 
+    
 
     return 0;
 }
